@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    font-size: 150%;
+}
+
+#search {
+    max-width: 600px;
+}
+
+#submit {
+    max-width: 300px; 
+}
+
+.descript {
+    font-weight: bold;
+}
+
+.card {
+    width: 400px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#alert-result {
+    width: 100%;
+}
+
+#alert-neighbour {
+    width: 100%;
+    margin-top: -20px;
+}
