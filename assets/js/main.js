@@ -37,17 +37,12 @@ function userInput(e) {
     e.preventDefault();
     const userValue = document.getElementById('search').value;
     getCountry(userValue);
-    document.getElementById('search').value = '';
-
-    
-    
+    document.getElementById('search').value = '';    
 }
 
 // Render country that user look for
 function renderCountry(data, neighbour=false){
-
     const html = `
-
         <div class="card mt-3">
             <img
               src="${data.flags.svg}"
@@ -83,12 +78,10 @@ function renderCountry(data, neighbour=false){
     } else {
         neighbours.insertAdjacentHTML('beforeend', html); 
     }
-
 }
 
 // Fetch the neighbours data and reder them
 function renderNeighbours(neighbours){
-   
         neighbours.forEach(async nb => {
             const response = await fetch(`https://restcountries.com/v3.1/alpha/${nb}`);
             const [data] = await response.json()
@@ -96,11 +89,11 @@ function renderNeighbours(neighbours){
     }) 
     }
 
-
 function clearCountries() {
     countries.innerHTML = '';
     neighbours.innerHTML = ''
 }
+
 
 // Event listeners
 submitBTn.addEventListener('click', userInput);
